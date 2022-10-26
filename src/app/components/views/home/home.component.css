@@ -1,0 +1,24 @@
+.conteiner {
+  max-width: 600px;
+  margin: 3vh auto;
+  background-color: transparent;
+}
+
+.header{
+    background-color: transparent;
+}
+
+.image-header {
+  background-image: url("../../../../assets/fotos/1.jpg");
+  background-size: cover;
+}
+
+/* .image-body {
+    width: 600px;
+    height: 500px;
+} */
+
+.texto{
+    font-size: medium;
+    text-align: justify;
+}

@@ -1,0 +1,73 @@
+h1 {
+  flex: 1 1 auto;
+}
+
+.email-icon {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.icons {
+  padding-right: 2rem;
+}
+
+mat-sidenav-content {
+  height: 86vh;
+}
+
+mat-sidenav {
+  width: 15%;
+}
+
+@media (max-width: 811px) {
+
+  mat-sidenav-content {
+    height: 89.5vh;
+  }
+
+  mat-sidenav {
+    width: 20%;
+  }
+}
+
+@media (max-width: 491px) {
+
+  mat-sidenav-content {
+    height: 89.5vh;
+  }
+
+  mat-sidenav {
+    width: 30%;
+  }
+}
+@media (max-width: 391px) {
+
+  mat-sidenav-content {
+    height: 88.5vh;
+  }
+
+  mat-sidenav {
+    width: 40%;
+  }
+}
+@media (max-width: 376px) {
+
+  mat-sidenav-content {
+    height: 87vh;
+  }
+
+  mat-sidenav {
+    width: 35%;
+  }
+}
+
+@media (max-width: 360px) {
+
+  mat-sidenav-content {
+    height: 88vh;
+  }
+
+  mat-sidenav {
+    width: 45%;
+  }
+}
