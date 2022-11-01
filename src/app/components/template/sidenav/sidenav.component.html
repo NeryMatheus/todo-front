@@ -11,17 +11,21 @@
     <a href="mailto:matheusnery345@gmail.com" class="email-icon" target="_blank">
       <mat-icon matTooltip="Envie-me um e-mail">contact_mail</mat-icon>
     </a>
+    <!-- Redirecionar para o Linkedin -->
+    <a href="https://www.linkedin.com/in/NeryMatheus/" class="linkedin-icon" target="_blank">
+      <img src="../../../../assets/icones/linkedin.svg" alt="Meu LinkedIn" matTooltip="Meu LinkedIn">
+    </a>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side">
+  <mat-sidenav #sidenav>
     <mat-nav-list>
       <a routerLink="/" mat-list-item>
         <mat-icon class="icons">home</mat-icon>
         Início
       </a>
-      <a mat-list-item routerLink="/categoria">
+      <a mat-list-item routerLink="/categorias">
         <mat-icon class="icons">category</mat-icon>
         Categorias
       </a>

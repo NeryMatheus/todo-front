@@ -11,6 +11,13 @@ h1 {
   padding-right: 2rem;
 }
 
+.linkedin-icon{
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin-left: 8px
+}
 mat-sidenav-content {
   height: 86vh;
 }

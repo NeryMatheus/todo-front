@@ -1,0 +1,15 @@
+.content{
+    margin: auto; 
+    width: 80%;   
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+
+mat-card{
+    margin: 20px 0px 20px 0px;    
+}
