@@ -4,37 +4,46 @@
   </div>
 
   <div class="body">
+    <div class="buttonCreate">
+      <button mat-raised-button color="primary" title="Cadastrar Novo Lembrete">
+        <mat-icon>add</mat-icon>
+        Cadastrar
+      </button>
+    </div>
+
     <!-- Tabela para exibir as categorias da api -->
     <table mat-table class="mat-elevation-z8" [dataSource]="categorias">
       <!-- Coluna de ações -->
       <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let categoria">
-          <button mat-icon-button>
-            <mat-icon>edit</mat-icon>
+        <th mat-header-cell *matHeaderCellDef class="action">AÇÕES</th>
+        <td mat-cell class="actionChild" *matCellDef="let categoria">
+          <button mat-icon-button title="Editar">
+            <mat-icon class="buttonACtion edit">edit</mat-icon>
           </button>
-          <button mat-icon-button>
-            <mat-icon>delete</mat-icon>
+          <button mat-icon-button title="Excluir">
+            <mat-icon class="buttonACtion delete">delete</mat-icon>
           </button>
         </td>
       </ng-container>
 
       <!-- Coluna de id -->
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <th mat-header-cell *matHeaderCellDef class="header id">ID</th>
         <td mat-cell *matCellDef="let categoria">{{categoria.id}}</td>
       </ng-container>
 
       <!-- Coluna de nome -->
       <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef>NOME</th>
+        <th mat-header-cell *matHeaderCellDef class="header">NOME</th>
         <td mat-cell *matCellDef="let categoria">{{categoria.nome}}</td>
       </ng-container>
 
       <!-- Coluna de descricao -->
       <ng-container matColumnDef="desc">
-        <th mat-header-cell *matHeaderCellDef>DESCRIÇÃO</th>
-        <td mat-cell *matCellDef="let categoria">{{categoria.descricao}}</td>
+        <th mat-header-cell *matHeaderCellDef class="header desc">DESCRIÇÃO</th>
+        <td mat-cell class="desc" *matCellDef="let categoria">
+          {{categoria.desc}}
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -44,5 +53,17 @@
         class="bgTr"
       ></tr>
     </table>
+  </div>
+
+  <div class="footer">
+    <button
+      mat-fab
+      color="primary"
+      aria-label="add"
+      class="add"
+      routerLink="/categorias/create"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
   </div>
 </div>

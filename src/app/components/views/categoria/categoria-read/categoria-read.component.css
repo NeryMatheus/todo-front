@@ -1,15 +1,114 @@
-.content{
-    margin: auto; 
-    width: 80%;   
+.content {
+  margin: auto;
+  width: 80%;
 }
 
-.title{
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px 0px 20px 0px;
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
 }
 
-mat-card{
-    margin: 20px 0px 20px 0px;    
+/* CENTRALIZAR A COLUNA AÇÔES */
+.action {
+  text-align: center;
+  width: 150px;
+}
+.actionChild {
+  text-align: center;
+}
+.actionChild > button {
+  width: 30px;
+}
+/* CENTRALIZAR A COLUNA AÇÔES */
+
+/* AJUSTES NOS BOTÕES DA AÇÃO*/
+.buttonACtion:hover {
+  transform: scale(1.2);
+  background-color: rgb(157, 152, 152);
+  border-radius: 50%;
+}
+.edit {
+  color: #3f51b5;
+}
+.delete {
+  color: rgb(255, 76, 76);
+}
+/* AJUSTES NOS BOTÕES */
+
+/* AJUSTES NA TABELA */
+mat-card {
+  margin: 20px 0px 20px 0px;
+}
+
+table {
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  font-weight: 800;
+}
+
+.id {
+  width: 70px;
+}
+/* AJUSTES NA TABELA */
+
+/* EFEITOS NA COLUNA */
+tr.bgTr:hover {
+  background: whitesmoke;
+}
+/* EFEITOS NA COLUNA */
+
+/* BOTÃO DE CRIAÇÃO */
+.buttonCreate {
+  float: right;
+  margin: 20px 0px;
+}
+.buttonCreate:hover {
+  /* Aumentar levemento o botão */
+  transform: scale(1.1);
+}
+
+.footer {
+  display: none;
+}
+/* BOTÃO DE CRIAÇÃO */
+
+/* Responsividade  */
+@media screen and (max-width: 600px) {
+  .content {
+    width: 90%;
+  }
+  .action {
+    width: 100px;
+  }
+  .actionChild {
+    width: 100px;
+  }
+  .actionChild > button {
+    width: 30px;
+  }
+  .id {
+    width: 50px;
+  }
+
+  .footer {
+    display: block;
+    position: fixed;
+    bottom: 40px;
+    right: 12px;
+  }
+
+  .buttonCreate {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .desc {
+    display: none;
+  }
 }
