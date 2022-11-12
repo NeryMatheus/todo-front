@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaReadComponent implements OnInit {
   categorias: Categoria[] = [];
-  displayedColumns: string[] = ['id', 'nome', 'desc', 'action'];
+  displayedColumns: string[] = ['id', 'nome', 'desc', 'lembrete', 'action'];
 
   constructor(private service: CategoriaService) {}
 

@@ -1,3 +1,5 @@
+import { LembreteReadAllComponent } from './components/views/lembrete/lembrete-read-all/lembrete-read-all.component';
+import { LembreteReadComponent } from './components/views/lembrete/lembrete-read/lembrete-read.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
@@ -27,6 +29,14 @@ const routes: Routes = [
     path: 'categorias/delete/:id',
     component: CategoriaDeleteComponent,
   },
+  {
+    path: 'categorias/:id/lembretes',
+    component: LembreteReadAllComponent,
+  },
+  {
+    path: 'categorias/:id_cat/lembretes/:id/read',
+    component: LembreteReadComponent,
+  }
 ];
 
 @NgModule({

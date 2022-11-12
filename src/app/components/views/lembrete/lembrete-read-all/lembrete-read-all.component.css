@@ -31,13 +31,13 @@
   border-radius: 50%;
 }
 .edit {
-  color: #3f51b5;
+  color: #166cc2;
 }
 .delete {
   color: rgb(255, 76, 76);
 }
 /* AJUSTES NOS BOTÕES */
-.buttonEvent {  
+.buttonEvent {
   color: #3f51b5;
 }
 
@@ -69,10 +69,20 @@ tr.bgTr:hover {
 
 /* BOTÃO DE CRIAÇÃO */
 .buttonCreate {
-  float: right;
+  float: left;
   margin: 20px 0px;
 }
 .buttonCreate:hover {
+  /* Aumentar levemento o botão */
+  transform: scale(1.1);
+}
+
+/* BOTÃO DE VOLTAR */
+.buttonBack {
+  float: right;
+  margin: 20px 0px;  
+}
+.buttonBack:hover {
   /* Aumentar levemento o botão */
   transform: scale(1.1);
 }
@@ -108,12 +118,6 @@ tr.bgTr:hover {
   }
 
   .buttonCreate {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .desc {
     display: none;
   }
 }

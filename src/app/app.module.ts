@@ -25,6 +25,8 @@ import { CategoriaDeleteComponent } from './components/views/categoria/categoria
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { LembreteReadAllComponent } from './components/views/lembrete/lembrete-read-all/lembrete-read-all.component';
+import { LembreteReadComponent } from './components/views/lembrete/lembrete-read/lembrete-read.component';
 
 /* ANGULAR MATERIAL */
 @NgModule({
@@ -37,6 +39,8 @@ import { HomeComponent } from './components/views/home/home.component';
     CategoriaCreateComponent,
     CategoriaUpdateComponent,
     CategoriaDeleteComponent,
+    LembreteReadComponent,
+    LembreteReadAllComponent,
   ],
   imports: [
     BrowserModule,
