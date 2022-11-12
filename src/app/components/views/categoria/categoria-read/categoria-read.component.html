@@ -5,7 +5,12 @@
 
   <div class="body">
     <div class="buttonCreate">
-      <button mat-raised-button color="primary" title="Cadastrar Novo Lembrete" routerLink="/categorias/create">
+      <button
+        mat-raised-button
+        color="primary"
+        title="Cadastrar Novo Lembrete"
+        routerLink="/categorias/create"
+      >
         <mat-icon>add</mat-icon>
         Cadastrar
       </button>
@@ -17,10 +22,18 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef class="action">AÇÕES</th>
         <td mat-cell class="actionChild" *matCellDef="let categoria">
-          <button mat-icon-button title="Editar">
+          <button
+            mat-icon-button
+            title="Editar"
+            routerLink="update/{{ categoria.id }}"
+          >
             <mat-icon class="buttonACtion edit">edit</mat-icon>
           </button>
-          <button mat-icon-button title="Excluir">
+          <button
+            mat-icon-button
+            title="Excluir"            
+            routerLink="delete/{{ categoria.id }}"
+          >
             <mat-icon class="buttonACtion delete">delete</mat-icon>
           </button>
         </td>
