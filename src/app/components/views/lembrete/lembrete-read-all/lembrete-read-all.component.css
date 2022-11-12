@@ -18,6 +18,7 @@
 }
 .actionChild {
   text-align: center;
+  
 }
 .actionChild > button {
   width: 30px;
@@ -96,6 +97,10 @@ tr.bgTr:hover {
 @media screen and (max-width: 600px) {
   .content {
     width: 90%;
+  }
+
+  td.mat-cell:last-of-type{
+    padding: 0;
   }
   .action {
     width: 100px;

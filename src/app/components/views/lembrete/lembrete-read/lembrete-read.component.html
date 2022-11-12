@@ -1,1 +1,61 @@
-<p>lembrete-read works!</p>
+<form class="content">
+  <h1>
+    Lembrete: <i>{{ lembrete.titulo }}</i>
+  </h1>
+  <mat-form-field class="form">
+    <mat-label>Título</mat-label>
+    <input
+      matInput
+      placeholder="Título"
+      [(ngModel)]="lembrete.titulo"
+      name="titulo"
+      disabled="true"
+    />
+  </mat-form-field>
+  <mat-form-field class="form">
+    <textarea
+      matInput
+      placeholder="Descrição"
+      [(ngModel)]="lembrete.descricao"
+      name="descricao"
+      disabled="true"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field class="form">
+    <textarea
+      matInput
+      placeholder="Autor"
+      [(ngModel)]="lembrete.autor"
+      name="autor"
+      disabled="true"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field class="form">
+    <textarea
+      matInput
+      placeholder="Data"
+      [(ngModel)]="lembrete.data"
+      name="data"
+      disabled="true"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field class="form">
+    <textarea
+      matInput
+      placeholder="Status"
+      [(ngModel)]="lembrete.status"
+      name="status"
+      disabled="true"
+    ></textarea>
+  </mat-form-field>
+  <div class="button">
+    <button class="button" color="primary" mat-raised-button (click)="update()">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+    <button class="button" mat-raised-button (click)="cancel()">
+      <mat-icon>arrow_back</mat-icon>
+      Voltar
+    </button>
+  </div>
+</form>

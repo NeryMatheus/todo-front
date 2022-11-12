@@ -16,4 +16,9 @@ export class LembreteServiceService {
     const url = `${this.baseUrl}lembretes?categoria=${id_cat}`;
     return this.http.get<LembreteModel[]>(url);
   }
+
+  findById(id: String): Observable<LembreteModel> {
+    const url = `${this.baseUrl}lembretes/${id}`;
+    return this.http.get<LembreteModel>(url);
+  }
 }

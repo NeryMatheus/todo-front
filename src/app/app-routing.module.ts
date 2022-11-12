@@ -7,6 +7,7 @@ import { CategoriaDeleteComponent } from './components/views/categoria/categoria
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { LembreteUpdateComponent } from './components/views/lembrete/lembrete-update/lembrete-update.component';
 
 const routes: Routes = [
   {
@@ -36,7 +37,11 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/lembretes/:id/read',
     component: LembreteReadComponent,
-  }
+  },
+  {
+    path: 'categorias/:id_cat/lembretes/:id/update',
+    component: LembreteUpdateComponent,
+  },
 ];
 
 @NgModule({
