@@ -23,11 +23,12 @@ import { SidenavComponent } from './components/template/sidenav/sidenav.componen
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
-import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
-import { LembreteReadAllComponent } from './components/views/lembrete/lembrete-read-all/lembrete-read-all.component';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { LembreteReadComponent } from './components/views/lembrete/lembrete-read/lembrete-read.component';
+import { LembreteReadAllComponent } from './components/views/lembrete/lembrete-read-all/lembrete-read-all.component';
 import { LembreteUpdateComponent } from './components/views/lembrete/lembrete-update/lembrete-update.component';
+
 
 /* ANGULAR MATERIAL */
 @NgModule({
@@ -41,8 +42,8 @@ import { LembreteUpdateComponent } from './components/views/lembrete/lembrete-up
     CategoriaUpdateComponent,
     CategoriaDeleteComponent,
     LembreteReadComponent,
-    LembreteReadAllComponent,
     LembreteUpdateComponent,
+    LembreteReadAllComponent
   ],
   imports: [
     BrowserModule,
