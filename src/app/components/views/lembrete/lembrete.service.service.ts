@@ -11,7 +11,7 @@ import { LembreteModel } from './lembrete.model';
 export class LembreteServiceService {
   baseUrl = environment.baseUrl;
 
-  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
+  constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   findAllByCategoria(id_cat: String): Observable<LembreteModel[]> {
     const url = `${this.baseUrl}lembretes?categoria=${id_cat}`;
@@ -23,9 +23,19 @@ export class LembreteServiceService {
     return this.http.get<LembreteModel>(url);
   }
 
+  create(lembrete: LembreteModel, id_cat: String): Observable<LembreteModel> {
+    const url = `${this.baseUrl}lembretes?categoria=${id_cat}`;
+    return this.http.post<LembreteModel>(url, lembrete);
+  }
+
   update(lembrete: LembreteModel): Observable<LembreteModel> {
     const url = `${this.baseUrl}lembretes/${lembrete.id}`;
     return this.http.put<LembreteModel>(url, lembrete);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}lembretes/${id}`;
+    return this.http.delete<void>(url);
   }
 
   message(msg: string): void {

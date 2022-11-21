@@ -9,7 +9,7 @@
         mat-raised-button
         color="primary"
         title="Cadastrar Novo Lembrete"
-        routerLink="/lembretes/create"
+        routerLink="create"
       >
         <mat-icon>add</mat-icon>
         Cadastrar
@@ -52,7 +52,7 @@
           <button
             mat-icon-button
             title="Excluir"
-            routerLink="delete/{{ lembrete.id }}"
+            routerLink="{{ lembrete.id }}/delete"
           >
             <mat-icon class="buttonACtion delete">delete</mat-icon>
           </button>
@@ -108,7 +108,7 @@
       color="primary"
       aria-label="add"
       class="add"
-      routerLink="lembretes/create"
+      routerLink="create"
     >
       <mat-icon>add</mat-icon>
     </button>

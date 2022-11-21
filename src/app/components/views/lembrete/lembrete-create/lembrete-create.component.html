@@ -9,9 +9,10 @@
       matInput
       placeholder="Título"
       [(ngModel)]="lembrete.titulo"
+      [formControl]="titulo"
       name="titulo"
-      disabled="true"
     />
+    <mat-error *ngIf="titulo.invalid">{{ getTitulo() }}</mat-error>
   </mat-form-field>
 
   <mat-form-field class="form">
@@ -19,9 +20,10 @@
       matInput
       placeholder="Descrição"
       [(ngModel)]="lembrete.descricao"
+      [formControl]="descricao"
       name="descricao"
-      disabled="true"
     ></textarea>
+    <mat-error *ngIf="descricao.invalid">{{ getDescricao() }}</mat-error>
   </mat-form-field>
 
   <mat-form-field class="form">
@@ -29,9 +31,10 @@
       matInput
       placeholder="Autor"
       [(ngModel)]="lembrete.autor"
+      [formControl]="autor"
       name="autor"
-      disabled="true"
     ></textarea>
+    <mat-error *ngIf="autor.invalid">{{ getAutor() }}</mat-error>
   </mat-form-field>
 
   <mat-form-field class="form">
@@ -41,25 +44,24 @@
       [matDatepicker]="picker"
       [(ngModel)]="lembrete.data"
       name="data"
-      disabled="true"
     />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-  
+
   <mat-form-field class="form">
-    <textarea
-      matInput
-      placeholder="Status"
-      [(ngModel)]="lembrete.status"
-      name="status"
-      disabled="true"
-    ></textarea>
+    <mat-label>Status</mat-label>
+    <mat-select [(ngModel)]="lembrete.status" name="status">
+      <mat-option *ngFor="let status of statusOption" [value]="status">
+        {{status}}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
-  
+
   <div class="button">
-    <button class="button" color="primary" mat-raised-button (click)="update()">
-      <mat-icon>edit</mat-icon>
-      Editar
+    <button class="button" color="primary" mat-raised-button (click)="create()">
+      <mat-icon>add</mat-icon>
+      Salvar
     </button>
     <button class="button" mat-raised-button (click)="cancel()">
       <mat-icon>arrow_back</mat-icon>

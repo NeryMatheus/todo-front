@@ -11,6 +11,8 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LembreteUpdateComponent implements OnInit {
 
+  statusOption = ['CRIADO', 'EM ANDAMENTO', 'FINALIZADO'];
+
   id_cat: String = '';
 
   lembrete: LembreteModel = {
