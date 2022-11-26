@@ -33,6 +33,7 @@ import { LembreteUpdateComponent } from './components/views/lembrete/lembrete-up
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { LembreteDeleteComponent } from './components/views/lembrete/lembrete-delete/lembrete-delete.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { LembreteDeleteComponent } from './components/views/lembrete/lembrete-de
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],

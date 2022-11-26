@@ -125,4 +125,8 @@ tr.bgTr:hover {
   .buttonCreate {
     display: none;
   }
+
+  .search {
+    float: left;
+  }
 }

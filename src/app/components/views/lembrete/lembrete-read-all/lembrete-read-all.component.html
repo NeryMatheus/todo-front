@@ -4,6 +4,13 @@
   </div>
 
   <div class="body">
+    <div class="search" style="width: 100px;">
+      <mat-form-field appearance="standard">
+        <mat-label>Filtro</mat-label>
+        <input matInput placeholder="" search (keyup)="applyFilter($event)" #input/>
+      </mat-form-field>
+    </div>
+
     <div class="buttonCreate">
       <button
         mat-raised-button
@@ -29,7 +36,7 @@
     </div>
 
     <!-- Tabela para exibir as categorias da api -->
-    <table mat-table class="mat-elevation-z8" [dataSource]="lembretes">
+    <table mat-table class="mat-elevation-z8" [dataSource]="dataSource">
       <!-- Coluna de ações -->
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef class="action">AÇÕES</th>
@@ -99,7 +106,18 @@
         *matRowDef="let row; columns: displayedColumns"
         class="bgTr"
       ></tr>
+
+      <tr *matNoDataRow="">
+        <td class="mat-cell" colspan="4">
+          Não foi poosível encontrar nenhum filtro relacionado à pesquisa <i>{{ input.value }}</i>
+        </td>
+      </tr>
     </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10]"
+      showFirstLastButtons
+    ></mat-paginator>
   </div>
 
   <div class="footer">
