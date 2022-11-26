@@ -9,7 +9,7 @@
 }
 
 .image-header {
-  background-image: url("../../../../assets/fotos/1.jpg");
+  background-image: url("dist/assets/img/1.jpg");
   background-size: cover;
 }
 
