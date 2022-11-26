@@ -8,11 +8,6 @@
     background-color: transparent;
 }
 
-.image-header {
-  background-image: url("dist/assets/img/1.jpg");
-  background-size: cover;
-}
-
 /* .image-body {
     width: 600px;
     height: 500px;
